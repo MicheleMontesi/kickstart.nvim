@@ -2,6 +2,4 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 
-return {
-  'kdheepak/lazygit.nvim',
-}
+return {}

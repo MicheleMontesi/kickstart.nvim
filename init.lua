@@ -291,6 +291,8 @@ require('lazy').setup({
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>lg', group = '[L]azy[G]it' },
+        { '<leader>rs', group = '[R]emote[S]SHFS' },
       }
     end,
   },
@@ -368,6 +370,7 @@ require('lazy').setup({
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'remote-sshfs')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
@@ -883,6 +886,8 @@ require('lazy').setup({
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.bufferline',
   require 'kickstart.plugins.copilot',
+  require 'kickstart.plugins.remotesshfs',
+  require 'kickstart.plugins.lazy-git',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
