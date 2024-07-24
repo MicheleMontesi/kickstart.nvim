@@ -16,6 +16,7 @@ return {
     {
       '<leader>rsd',
       function()
+        vim.cmd 'cd'
         require('remote-sshfs.api').disconnect()
       end,
       desc = '[D]isconnect from remote',

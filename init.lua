@@ -159,6 +159,11 @@ vim.opt.scrolloff = 10
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
+
+-- Set < and > to indent/unindent selected lines more easily
+vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true })
+
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
