@@ -32,9 +32,12 @@ return {
       },
     }
 
-    vim.api.nvim_set_keymap('n', '<C-,>', '<cmd>BufferLineCyclePrev<cr>', { noremap = true, silent = true, desc = 'Previous buffer' })
-    vim.api.nvim_set_keymap('n', '<C-.>', '<cmd>BufferLineCycleNext<cr>', { noremap = true, silent = true, desc = 'Next buffer' })
+    vim.keymap.set('n', '<C-,>', '<cmd>BufferLineCyclePrev<cr>', { noremap = true, silent = true, desc = 'Previous buffer' })
+    vim.keymap.set('n', '<C-.>', '<cmd>BufferLineCycleNext<cr>', { noremap = true, silent = true, desc = 'Next buffer' })
     vim.keymap.set('n', '[b', '<cmd>BufferLineCyclePrev<cr>', { noremap = true, silent = true, desc = 'Previous buffer (<C-,>)' })
     vim.keymap.set('n', ']b', '<cmd>BufferLineCycleNext<cr>', { noremap = true, silent = true, desc = 'Next buffer (<C-.>)' })
+    vim.keymap.set('n', '<leader>bd', '<cmd>bd<cr>', { noremap = true, silent = true, desc = '[B]uffer [D]elete' })
+    vim.keymap.set('n', '<leader>bp', '<cmd>BufferLineCyclePrev<cr>', { noremap = true, silent = true, desc = '[B]uffer [P]revious ([b)' })
+    vim.keymap.set('n', '<leader>bn', '<cmd>BufferLineCycleNext<cr>', { noremap = true, silent = true, desc = '[B]uffer [N]ext (]b)' })
   end,
 }
